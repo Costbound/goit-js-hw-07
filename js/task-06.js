@@ -18,15 +18,17 @@ function createBoxes(amount) {
     console.log(amount);
     let width = 30;
     let height = 30;
+    const boxList = [];
     for (let i = 0; i < amount; i++) {
       const box = document.createElement("div");
       box.style.width = `${width}px`;
       box.style.height = `${height}px`;
       box.style.backgroundColor = getRandomHexColor();
-      boxes.append(box);
+      boxList.push(box);
       width += 10;
       height += 10;
     }
+    boxes.append(...boxList);
     input.value = "";
   }
 }
