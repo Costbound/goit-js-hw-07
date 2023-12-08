@@ -9,24 +9,23 @@ const input = document.querySelector("input");
 const createBtn = document.querySelector("button[data-create]");
 const destroyBtn = document.querySelector("button[data-destroy]");
 
-createBtn.addEventListener("click", () => { input.value > 100 ? alert("Max amount of boxes is 100") : createBoxes(Number(input.value)) });
+createBtn.addEventListener("click", () => createBoxes(Number(input.value)));
 destroyBtn.addEventListener("click", destroyBoxes);
 
+const boxSize = 30;
 function createBoxes(amount) {
-  if (input.value !== "" && amount > 1) {  
+  if (input.value > 100 || input.value < 1) {
+    alert("Enter number from 1 to 100!");
+    input.value = "";
+  }else {
     boxes.innerHTML = "";
-    console.log(amount);
-    let width = 30;
-    let height = 30;
     const boxList = [];
-    for (let i = 0; i < amount; i++) {
+    for (let i = 0; i < amount * 10; i += 10) {
       const box = document.createElement("div");
-      box.style.width = `${width}px`;
-      box.style.height = `${height}px`;
+      box.style.width = `${boxSize + i}px`;
+      box.style.height = `${boxSize + i}px`;
       box.style.backgroundColor = getRandomHexColor();
       boxList.push(box);
-      width += 10;
-      height += 10;
     }
     boxes.append(...boxList);
     input.value = "";
