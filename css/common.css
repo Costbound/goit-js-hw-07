@@ -6,11 +6,11 @@
 
 body {
   margin: 16px;
-  font-family: 'Montserrat' , sans-serif;
+  font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #fff;
-  color: #2E2F42;
+  color: #2e2f42;
   line-height: 1.5;
   letter-spacing: 0.04em;
 }
@@ -26,8 +26,8 @@ button {
   border: none;
   color: #fff;
   border-radius: 8px;
-  background-color: #4E75FF;
-  font-family: "Montserrat", sans-serif;
+  background-color: #4e75ff;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
@@ -35,7 +35,7 @@ button {
 }
 button:hover,
 button:focus {
-  background-color:#6C8CFF;
+  background-color: #6c8cff;
 }
 
 ul,
